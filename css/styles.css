@@ -1,66 +1,146 @@
-#accordion{
-	width: 50%;
-	display: block;
-	float: right;
-	margin-top: -18px;
-}
-
-#accordion1{
-	width: 50%;
-	display: block;
-	float: right;
-}
-
-#menuli {
-
-}
-
 //Nav Bar Begins
-.horizontal-nav {
-  background: #efefef;
-  border-radius: 6px;
-  
+
+#menu 
+{ float: left; 
+  position: relative; 
+  top: 0; 
+  left: 0; 
+  overflow: hidden;
 }
-.horizontal-nav ul {
-	float: right;
-  text-align: center;
-  border-radius: 6px;
-  border: 1px solid #0e7079;
-  list-style: none;
-	width: 75%;
-	padding: 10px;
-	color: #e3ddc9;
-	background-color: #453326;
-}
-.horizontal-nav ul li {
+
+/*#menu .colourful 
+{ display: inline; 
+  position: absolute; 
+  background: #a68239; 
+  height: 38px; 
+  width: 85px; 
+  top: 4px;
+  z-index: 1;
   float: left;
-  border-left: 1px solid #0e7079;
+}*/
+
+#menu ul 
+{ margin: 0; 
+  padding: 0; 
+  list-style: none; 
+  float:left; 
+  position: relative; 
+  top: 0; 
+  left: 0; 
+  z-index: 0; 
 }
-.horizontal-nav ul li:first-child {
-  border-left: 0 none;
+
+#menu li 
+{ float: left; 
+  margin: 0 1px 0 0;
+  padding: 5px;
+  box-shadow: 0 0 10px #388c1e;
 }
-.horizontal-nav ul li a {
-  display: inline;
-  padding: 10px 20px;
-  color: #fff;
-  border-top: 1px solid rgba(255,255,255, 0.25);
-  border-left: 1px solid rgba(255,255,255, 0.25);
-  
+
+#menu a:link, #menu a:visited, #menu a:hover, #menu a:active 
+{ color: #9bcc60; 
+  text-align: center;
+	border-style: solid;
+	line-height: 40px; 
+  width: 85px;
+	background-color: #825b10;
+	border-width: 12px;
 }
-.horizontal-nav ul li:first-child a {
-  border-left: 0 none;
-}
-.horizontal-nav ul li a:hover {
-  background: #453326;
-	color: #e3ddc9;
-}
-.horizontal-nav ul li:first-child a {
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-}
-.horizontal-nav ul li:last-child a {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
+
+#menu li a:hover 
+{ text-decoration: none; 
+  color: #fff; 
+  text-shadow: 0 0 4px #999;
+  background-color: #000000;
 }
 
 //Nav bar ends
+
+// Slider 
+
+ul.accordion {
+  list-style-type: none;
+  position: relative;
+  top: 0;
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.5em;
+}
+ 
+ul.accordion li {
+  float: right;
+  width: 110px;
+  height: 480px;
+  display: block;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 3px 5px #555;
+  -moz-box-shadow: 1px 3px 5px #555;
+  box-shadow: 1px 3px 5px #555;
+	margin-top: 20px;
+}
+
+/*accordion*/
+
+.nav{
+	padding: 60px;
+}
+
+#menu{
+	padding: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+	float: right;
+	overflow: auto;
+	z-index: 0;
+}
+
+#img{
+	float: left;
+	width: 400px;
+	height: 50px;
+	margin-right: 528px;
+	z-index: 0;
+}
+
+.green{
+	width: 990px;
+	padding: 10px;
+	height: 380px;
+}
+
+#content{
+	width: 10px;
+	height: 100px;
+}
+
+#content img {
+	height: 630px;
+	margin: 10px;
+	position: absolute;
+	padding-left: 11px;
+	padding-top: 48px;
+	width: 1400px;
+}
+
+#colum .left{
+	width: 701px;
+	height: 700px;
+	margin-left: 18px;
+	margin-top: 589px;
+}
+
+#colum .right{
+	width: 698px;
+	height: 700px;
+}
+
+
+
+
