@@ -1,143 +1,112 @@
-$(function() {
-    $( "#accordion" ).accordion({
-      event: "click hoverintent"
-    });
-  });
- 
-  /*
-   * hoverIntent | Copyright 2011 Brian Cherne
-   * http://cherne.net/brian/resources/jquery.hoverIntent.html
-   * modified by the jQuery UI team
-   */
-  $.event.special.hoverintent = {
-    setup: function() {
-      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
+//Accordion
+$(function(){
+  $(".accordion > li").hover(
+    function(){
+      var $this = $(this);
+      $this.stop().animate({"width": "1010px"},500);
+      $('.heading', $this).stop(true,true).fadeOut();
+      $('.bgDescription', $this).stop(true,true).slideDown(500);
+      $('.description',$this).stop(true,true).fadeIn();
     },
-    teardown: function() {
-      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
-    },
-    handler: function( event ) {
-      var currentX, currentY, timeout,
-        args = arguments,
-        target = $( event.target ),
-        previousX = event.pageX,
-        previousY = event.pageY;
- 
-      function track( event ) {
-        currentX = event.pageX;
-        currentY = event.pageY;
-      };
- 
-      function clear() {
-        target
-          .unbind( "mousemove", track )
-          .unbind( "mouseout", clear );
-        clearTimeout( timeout );
-      }
- 
-      function handler() {
-        var prop,
-          orig = event;
- 
-        if ( ( Math.abs( previousX - currentX ) +
-            Math.abs( previousY - currentY ) ) < 7 ) {
-          clear();
- 
-          event = $.Event( "hoverintent" );
-          for ( prop in orig ) {
-            if ( !( prop in event ) ) {
-              event[ prop ] = orig[ prop ];
-            }
-          }
-          // Prevent accessing the original event since the new event
-          // is fired asynchronously and the old event is no longer
-          // usable (#6028)
-          delete event.originalEvent;
- 
-          target.trigger( event );
-        } else {
-          previousX = currentX;
-          previousY = currentY;
-          timeout = setTimeout( handler, 100 );
-        }
-      }
- 
-      timeout = setTimeout( handler, 100 );
-      target.bind({
-        mousemove: track,
-        mouseout: clear
-      });
+    function(){
+      var $this = $(this);
+      $this.stop().animate({"width": "115px"},1000);
+      $('.heading', $this).stop(true,true).fadeIn();
+      $('.bgDescription', $this).stop(true,true).slideUp(500);
+      $('.description',$this).stop(true,true).fadeOut();
     }
-  };
-  
-  $(function() {
-    $( "#accordion1" ).accordion({
-      event: "click hoverintent"
-    });
-  });
+  )
+});
+
+//Navbar
+jQuery(document).ready(function($) {
  
-  /*
-   * hoverIntent | Copyright 2011 Brian Cherne
-   * http://cherne.net/brian/resources/jquery.hoverIntent.html
-   * modified by the jQuery UI team
-   */
-  $.event.special.hoverintent = {
-    setup: function() {
-      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
-    },
-    teardown: function() {
-      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
-    },
-    handler: function( event ) {
-      var currentX, currentY, timeout,
-        args = arguments,
-        target = $( event.target ),
-        previousX = event.pageX,
-        previousY = event.pageY;
+    /* create the span tht will be animated across the menu*/
+    /* declare our many variables for easy ref*/
  
-      function track( event ) {
-        currentX = event.pageX;
-        currentY = event.pageY;
-      };
+        var $span = $('<span class="colourful"></span>');
+        $span.insertBefore($("#menu ul"));
  
-      function clear() {
-        target
-          .unbind( "mousemove", track )
-          .unbind( "mouseout", clear );
-        clearTimeout( timeout );
-      }
+        var $menu_link = $('#menu li a'),
+        $hovered =  $('#menu a.hovered'),/**/
+        $hovered_pos = $hovered.position('#menu');/*position of hovered menu item*/
  
-      function handler() {
-        var prop,
-          orig = event;
+        /* declare our many colors that can confuse a chameleon*/
+        var $colour_arr = ['#825b10','#825b10','#825b10','#825b10','#825b10','#825b10','#825b10','#825b10','#825b10'];
  
-        if ( ( Math.abs( previousX - currentX ) +
-            Math.abs( previousY - currentY ) ) < 7 ) {
-          clear();
+        /*iterate through all menu links and apply colors to border top */
+        $menu_link.each(function(index){
  
-          event = $.Event( "hoverintent" );
-          for ( prop in orig ) {
-            if ( !( prop in event ) ) {
-              event[ prop ] = orig[ prop ];
-            }
-          }
-          // Prevent accessing the original event since the new event
-          // is fired asynchronously and the old event is no longer
-          // usable (#6028)
-          delete event.originalEvent;
+                    $menu_link.eq(index).css('border-color',$colour_arr[index]);
  
-          target.trigger( event );
-        } else {
-          previousX = currentX;
-          previousY = currentY;
-          timeout = setTimeout( handler, 100 );
+            });
+ 
+    /* all the magic happens here*/
+    function init () {
+ 
+        if($hovered_pos) {
+                $span.css('right',$hovered_pos);
+                var index = 0;
+                /* search for the selected menu item*/
+                for(i=0; i<$menu_link.length; i++) {
+                    if($($menu_link[i]).hasClass('hovered')) {
+                        index = i;
+                    }
+                }
+                $span.css('background',$colour_arr[index]);
+ 
         }
-      }
+        /*mouseenter funtion*/
+        $menu_link.each(
+            function( intIndex ){
+                $(this).on (
+                    "mouseenter",
+                        function(event){
  
-      timeout = setTimeout( handler, 100 );
-      target.bind({
-        mousemove: track,
-        mouseout: clear
-      });
+                            var x = $(this).position('#menu');
+                            x = x.right;
+ 
+                                $span.css('background',$colour_arr[intIndex]);
+ 
+                            $span.stop();
+                            $span.animate({
+ 
+                                right: x
+                              },300);
+                        }
+                    );
+ 
+                }
+         );
+        /* mouseout function*/
+        $menu_link.each(
+            function( intIndex ){
+                $(this).on (
+                    "mouseleave",
+                        function(event){
+                            $span.stop();
+                        var x = -100;
+                        if($hovered_pos) {
+                            x = $hovered_pos;
+                            var index = 0;
+                            for(i=0; i<$menu_link.length; i++) {
+                                if($($menu_link[i]).hasClass('hovered')) {
+                                    index = i;
+                                }
+                            }
+                                $span.css('background',colour_arr[index]);
+ 
+                        }
+ 
+                        $span.animate({
+ 
+                                right: x
+                              },300);
+                        }
+                    );
+                }
+         );
     }
-  };
+    /* call/ init our function*/
+    init();
+});
