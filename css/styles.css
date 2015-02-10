@@ -103,16 +103,10 @@ ul.accordion li {
 
 #img{
 	float: left;
-	width: 400px;
+	width: 325px;
 	height: 50px;
-	margin-right: 528px;
+	margin-right: 559px;
 	z-index: 0;
-}
-
-.green{
-	width: 990px;
-	padding: 10px;
-	height: 380px;
 }
 
 #content{
