@@ -20,13 +20,22 @@
 }
 
 img.back {
-	width: 1380px;
+	width: 1390px;
 	height: 540px;
 	position: absolute;
 	margin-top: 39px;
+	left: 11px;
 }
 
 //Media queries
+
+/*@media only screen and (media feature) {
+    CSS-Code;
+}
+
+@media not|only mediatype and (media feature) {
+    CSS-Code;
+}*/
 
 /*#bar{
 	margin: 3px 4px 3px 3px;
