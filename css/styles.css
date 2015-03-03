@@ -39,12 +39,13 @@ img#black {
 	width: 695px;
 	margin-top: 580px;
 	margin-left: -5px;
+	position: fixed;
 }
 
 img#grass {
 	width: 696px;
 	margin-top: 580px;
-	position: absolute;
+	position: fixed;
 	height: 496px;
 	right: 19px;
 }
