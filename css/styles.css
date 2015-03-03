@@ -22,8 +22,8 @@
 img.back {
 	width: 1370px;
 	height: 540px;
-	margin: 13px;
 	position: absolute;
+	margin-top: 29px;
 }
 
 //Media queries
