@@ -37,17 +37,17 @@ div#left {
 
 img#black {
 	width: 695px;
-	margin-top: 580px;
-	margin-left: -5px;
-	position: fixed;
+	position: absolute;
+	top: 600px;
+	left: 10px;
 }
 
 img#grass {
 	width: 696px;
-	margin-top: 580px;
-	position: fixed;
-	height: 496px;
-	right: 22px;
+	position: absolute;
+	z-index: -1;
+	top: 600px;
+	right: 10px;
 }
 
 
