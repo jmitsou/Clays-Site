@@ -27,6 +27,29 @@ img.back {
 	left: 11px;
 }
 
+div#right {
+	float: right;
+}
+
+div#left {
+	float: left;
+}
+
+img#black {
+	width: 695px;
+	margin-top: 580px;
+	margin-left: -5px;
+}
+
+img#grass {
+	width: 696px;
+	margin-top: 580px;
+	position: absolute;
+	height: 496px;
+	right: 19px;
+}
+
+
 //Media queries
 
 /*@media only screen and (media feature) {
