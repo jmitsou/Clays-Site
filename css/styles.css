@@ -6,7 +6,7 @@
 	color: #c59726;
 	text-shadow: 0 0 1px #ffffff;
 	border-color: maroon;
-	padding: 10px;
+	padding: 8px;
 	position: static;
 	float: right;
 }
@@ -16,13 +16,13 @@
 	margin-right: 150px;
 	margin-top: 4px;
 	z-index: 1;
-	margin-left: 4px;
+	margin-left: 2px;
 }
 
 img.back {
 	width: 1370px;
 	height: 540px;
-	margin: 39px 8px 8px;
+	margin: 13px;
 	position: absolute;
 }
 
