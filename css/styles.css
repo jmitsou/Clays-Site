@@ -20,10 +20,10 @@
 }
 
 img.back {
-	width: 1400px;
-	height: 550px;
+	width: 1373px;
+	height: 540px;
 	margin: 39px 8px 8px;
-	position: relative;
+	position: absolute;
 }
 
 //Media queries
