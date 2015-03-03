@@ -1,5 +1,5 @@
 #bar{
-	margin: 4px;
+	margin: 9px;
 	-moz-box-shadow: 0 0 40px #4dc112;
 	box-shadow: 0 0 40px #4dc112;
 	text-align: center;
@@ -14,14 +14,15 @@
 #img{
 	width: 283px;
 	margin-right: 150px;
-	margin-top: 1px;
+	margin-top: 4px;
 	z-index: 1;
+	margin-left: 4px;
 }
 
 img.back {
 	width: 1400px;
 	height: 550px;
-	margin: 8px;
+	margin: 39px 8px 8px;
 	position: relative;
 }
 
