@@ -1,14 +1,17 @@
 #bar{
-	margin: 9px;
-	-moz-box-shadow: 0 0 40px #4dc112;
-	box-shadow: 0 0 40px #4dc112;
+	margin: 10px;
+	-moz-box-shadow: 0 0 40px #5adad2;
+	box-shadow: 0 0 40px #5adad2;
 	text-align: center;
-	color: #c59726;
+	color: #5adbd3;
 	text-shadow: 0 0 1px #ffffff;
-	border-color: maroon;
+	border-color: #9f9faa;
 	padding: 8px;
-	position: static;
+	position: relative;
 	float: right;
+	left: -14px;
+	background-color: #789591;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
 }
 
 #img{
@@ -20,8 +23,8 @@
 }
 
 img.back {
-	width: 1390px;
-	height: 540px;
+	width: 1400px;
+	height: 560px;
 	position: absolute;
 	margin-top: 39px;
 	left: 11px;
@@ -36,18 +39,19 @@ div#left {
 }
 
 img#black {
-	width: 695px;
+	width: 705px;
 	position: absolute;
-	top: 600px;
-	left: 10px;
+	z-index: -1;
+	top: 617px;
+	right: 719px;
+	
 }
 
 img#grass {
 	width: 696px;
-	position: absolute;
+	position: fixed;
 	z-index: -1;
-	top: 600px;
-	right: 10px;
+	right: 24px;
 }
 
 
