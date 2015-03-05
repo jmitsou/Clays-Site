@@ -11,47 +11,57 @@
 		
 			<!--JavaScripts-->
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
-	  	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+	  	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		
-		<!--CSS-->
+			<!--CSS-->
 		<link rel="stylesheet" href="css/themes/my-custom-theme.css" />
 	  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
 	  	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
 		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		
+	<!-- Accordion -->
+		<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane_horizontal_same_width.css" media="all" />
+        <!--[if lte IE 8 ]>
+        <link rel="stylesheet" type="text/css" href="css/ie.css" /><![endif]-->
+        <link rel="stylesheet" type="text/css" href="css/accordionGallery_horizontal_same_width.css" />
+        <!-- scripts -->
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.prettyPhoto.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+        <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript" src="js/jquery.accordionGallery.min.js"></script>
+	<!-- ACC end -->
 	
 	</head>
 	<body>
 	
 		<div data-role="page" id="home">
-			<div data-role="header">
-				<div data-type="horizontal" id="menu">
-					<img src="" alt="" id="img" class="ui-btn-left"/>
+			<div data-role="header" id="head" data-type="horizontal">
+					<img src="logo/logo.png" alt="" id="logo" class=""/>
 					<a href="#quote" id="bar" class="ui-btn ui-corner-all">Get A Quote</a>
 					<a href="#ash" id="bar" class="ui-btn ui-corner-all">Asphalt Services</a>
 					<a href="#lawn" id="bar" class="ui-btn ui-corner-all">Lawn Services</a>
 					<a href="#home" id="bar" class="ui-btn ui-corner-all">Home</a>
-				</div>
 			</div>
 			<div data-role="content" id="con">
-				<img src="smarterservicesheader.jpg" alt="" class="back" />
-				<div id="left">
-					<img src="pav.png" alt="" id="black" />
-				</div>
-				<div id="right">
-					<img src="grass.png" alt="" id="grass" />
-				</div>
+				<img src="smarterservicesheader.jpg" alt="" class="bg" />
+			</div>
+			<div id="left">
+					<!--<a href="#" id="btn1" class="ui-btn ui-corner-all">Button1</a>-->
+			</div>
+			<div id="right">
+					<a href="#" id="btn1" class="ui-btn ui-corner-all ">Button1</a>
 			</div>
 		</div>
 		
 		<div data-role="page" id="lawn">
-			<div data-role="header">
-				<div data-type="horizontal" id="menu">
-					<img src="" alt="" id="img" class="ui-btn-left"/>
+			<div data-role="header" id="head" data-type="horizontal">
+					<img src="logo/logo.png" alt="" id="logo" class=""/>
 					<a href="#quote" id="bar" class="ui-btn ui-corner-all">Get A Quote</a>
 					<a href="#ash" id="bar" class="ui-btn ui-corner-all">Asphalt Services</a>
 					<a href="#lawn" id="bar" class="ui-btn ui-corner-all">Lawn Services</a>
 					<a href="#home" id="bar" class="ui-btn ui-corner-all">Home</a>
-				</div>
 			</div>
 			<div data-role="content" id="">
 			lawn page
@@ -61,14 +71,12 @@
 		</div>
 		
 		<div data-role="page" id="ash">
-			<div data-role="header">
-				<div data-type="horizontal" id="menu">
-					<img src="" alt="" id="img" class="ui-btn-left"/>
+			<div data-role="header" id="head" data-type="horizontal">
+					<img src="logo/logo.png" alt="" id="logo" class=""/>
 					<a href="#quote" id="bar" class="ui-btn ui-corner-all">Get A Quote</a>
 					<a href="#ash" id="bar" class="ui-btn ui-corner-all">Asphalt Services</a>
 					<a href="#lawn" id="bar" class="ui-btn ui-corner-all">Lawn Services</a>
 					<a href="#home" id="bar" class="ui-btn ui-corner-all">Home</a>
-				</div>
 			</div>
 			<div data-role="content" id="">
 			ash page
@@ -78,14 +86,12 @@
 		</div>
 		
 		<div data-role="page" id="quote">
-			<div data-role="header">
-				<div data-type="horizontal" id="menu">
-					<img src="" alt="" id="img" class="ui-btn-left"/>
+			<div data-role="header" id="head" data-type="horizontal">
+					<img src="logo/logo.png" alt="" id="logo" class=""/>
 					<a href="#quote" id="bar" class="ui-btn ui-corner-all">Get A Quote</a>
 					<a href="#ash" id="bar" class="ui-btn ui-corner-all">Asphalt Services</a>
 					<a href="#lawn" id="bar" class="ui-btn ui-corner-all">Lawn Services</a>
 					<a href="#home" id="bar" class="ui-btn ui-corner-all">Home</a>
-				</div>
 			</div>
 			<div data-role="content" id="">
 			quote page

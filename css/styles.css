@@ -1,3 +1,16 @@
+/*Header*/
+
+div#head{
+	width: 100%;
+	height: 55px;
+}
+
+#logo{
+	height: 32px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
 #bar{
 	margin: 10px;
 	-moz-box-shadow: 0 0 40px #5adad2;
@@ -9,57 +22,59 @@
 	padding: 8px;
 	position: relative;
 	float: right;
-	left: -14px;
+	left: -8px;
 	background-color: #789591;
 	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
 }
 
-#img{
-	width: 283px;
-	margin-right: 150px;
-	margin-top: 4px;
-	z-index: 1;
-	margin-left: 2px;
+/*content*/
+
+div#con{
+	width: 100%;
+	height: 502px;
+	padding: 0;
 }
 
-img.back {
+img.bg{
 	width: 100%;
-	height: 561px;
-	position: absolute;
-	margin-top: 39px;
-	left: 0;
+	height: 498px;
 }
+
 
 div#right {
 	float: right;
+	width: 50%;
+	background-color: #9ebb2f;
+	margin-top: 538px;
+	position: absolute;
+	border-style: none;
+	height: 1000px;
+	top: 17px;
+	right: -3px;
 }
 
 div#left {
 	float: left;
-}
-
-img#black {
 	width: 51%;
+	background-color: #797985;
 	position: absolute;
-	top: 617px;
-	height: auto;
-	bottom: 0;
-	margin-bottom: 0;
-	margin-left: -17px;
-	left: 8px;
-	overflow: scroll;
+	border-style: none;
+	height: 1000px;
+	top: 555px;
+	left: -1px;
 }
 
-img#grass {
-	width: 50%;
-	position: absolute;
-	top: 618px;
-	right: -3px;
-	height: auto;
-	overflow: scroll;
-	margin-bottom: 0;
-}
 
+
+#btn1 {
+	width: 400px;
+	height: 100px;
+	background-color: #687d14;
+	z-index: 1;
+	position: absolute;
+	border: 5px inset #bdb7b7;
+	padding: 10px;
+}
 
 //Media queries
 
