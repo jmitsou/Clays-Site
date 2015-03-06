@@ -31,50 +31,49 @@ div#head{
 
 div#con{
 	width: 100%;
-	height: 502px;
+	height: auto;
 	padding: 0;
 }
 
 img.bg{
 	width: 100%;
-	height: 498px;
+	height: auto;
 }
 
 
 div#right {
-	float: right;
-	width: 50%;
 	background-color: #9ebb2f;
-	margin-top: 538px;
-	position: absolute;
-	border-style: none;
-	height: 1000px;
-	top: 17px;
-	right: -3px;
+	max-height: 100%;
+	max-width: 50%;
+	float: right;
 }
 
 div#left {
-	float: left;
-	width: 51%;
 	background-color: #797985;
-	position: absolute;
-	border-style: none;
-	height: 1000px;
-	top: 555px;
-	left: -1px;
+	max-height: 100%;
+	max-width: 50%;
+	display: block;
+	float: left;
 }
 
 
-
-#btn1 {
+/*#btn1 {
 	width: 400px;
 	height: 100px;
 	background-color: #687d14;
 	z-index: 1;
-	position: absolute;
 	border: 5px inset #bdb7b7;
-	padding: 10px;
+	margin: 35px 50px 10px;
+	position: static;
 }
+
+#btn2 {
+	width: 500px;
+	height: 100px;
+	z-index: 1;
+	border: 5px inset #bdb7b7;
+	background-color: #b3b1b1;
+}*/
 
 //Media queries
 
