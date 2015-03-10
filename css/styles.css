@@ -8,23 +8,23 @@ div#head{
 #logo{
 	height: 32px;
 	margin-top: 10px;
-	margin-left: 20px;
+	margin-left: 10px;
 }
 
 #bar{
-	margin: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
 	-moz-box-shadow: 0 0 40px #5adad2;
 	box-shadow: 0 0 40px #5adad2;
 	text-align: center;
 	color: #5adbd3;
 	text-shadow: 0 0 1px #ffffff;
 	border-color: #9f9faa;
-	padding: 8px;
-	position: relative;
-	float: right;
-	left: -8px;
+	padding: 5px;
 	background-color: #789591;
 	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	display: inline;
+	float: right;
 }
 
 /*content*/
@@ -41,39 +41,59 @@ img.bg{
 }
 
 
-div#right {
+section#right {
 	background-color: #9ebb2f;
-	max-height: 100%;
-	max-width: 50%;
+	height: 100%;
 	float: right;
-}
-
-div#left {
-	background-color: #797985;
-	max-height: 100%;
-	max-width: 50%;
 	display: block;
+	margin-top: -5px;
+	margin-right: -1px;
+	width: 50%;
+	z-index: 0;
+}
+
+section#left {
+	background-color: #797985;
+	height: 100%;
+	display: inline-block;
 	float: left;
+	margin-top: -5px;
+	margin-left: 1px;
+	width: 50%;
 }
 
 
-/*#btn1 {
-	width: 400px;
-	height: 100px;
+#btn1 {
 	background-color: #687d14;
-	z-index: 1;
+	z-index: 0;
 	border: 5px inset #bdb7b7;
-	margin: 35px 50px 10px;
-	position: static;
+	width: 20px;
+	margin: 20px;
+	height: 20px;
+	padding: 100px;
+	display: block;
+	position: relative;
+	top: 30px;
+	right: 30px;
+	left: 30px;
+	bottom: 30px;
 }
 
 #btn2 {
-	width: 500px;
-	height: 100px;
-	z-index: 1;
+	z-index: 0;
 	border: 5px inset #bdb7b7;
 	background-color: #b3b1b1;
-}*/
+	width: 20px;
+	margin: 20px;
+	height: 20px;
+	padding: 100px;
+	display: block;
+	position: relative;
+	top: 30px;
+	right: 30px;
+	left: 30px;
+	bottom: 30px;
+}
 
 //Media queries
 
