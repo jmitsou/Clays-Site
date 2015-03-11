@@ -1,30 +1,36 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML5>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<meta name="HandheldFriendly" content="True">
-	 	<meta name="MobileOptimized"/>
-	 	<meta name="viewport" content="width=device-width">
-	 	<meta content="index, follow" name="robots">
-	 	<meta http-equiv="ClearType" content="on">
+		<meta charset="utf-8"/>
+ 		<meta name="HandheldFriendly" content="True">
+ 		<meta name="MobileOptimized"/>
+ 		<meta name="viewport" content="width=device-width">
+ 		<meta content="index, follow" name="robots">
+ 		<meta http-equiv="cleartype" content="on">
 		<title>Clays Site</title>
 		
 	<!--JavaScripts-->
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
 	  	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		
+	  	<script type="text/javascript" src="jquery-1.6.min.js"></script>
+	
 	<!--CSS-->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		
 		<link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css" />
 		<link rel="stylesheet" href="css/jquery.mobile.custom.theme.min.css" />
-		<link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css" />
 	  	<link rel="stylesheet" href="css/themes/images/jquery.mobile.icons.min.css" />
-	  	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	  	<link rel="stylesheet" href="css/themes/land.min.css" />
 	  	<link rel="stylesheet" href="css/styles.css" type="text/css" />
-	  	 
 		
 	<!-- Accordion -->
         <link rel="stylesheet" type="text/css" href="css1/jquery.jscrollpane_horizontal_same_width.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css1/jquery.jscrollpane_horizontal_dif_width.css" media="all" />
         <link rel="stylesheet" type="text/css" href="css1/accordionGallery_double.css" />
+        <link rel="stylesheet" type="text/css" href="css1/_horizontal_dif_width.css">
+        <link rel="stylesheet" type="text/css" href="css1/_horizontal_same_width.css">
+        
     <!--[if lte IE 8 ]>
         <link rel="stylesheet" type="text/css" href="css1/ie.css" />
     <![endif]-->
@@ -32,7 +38,11 @@
     <!-- scripts -->
         <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
-        <script type="text/javascript" src="js/jquery.accordionGallery.min.js"></script>   
+        <script type="text/javascript" src="js/jquery.accordionGallery.min.js"></script>
+        <script type="text/javascript" src="js/easing.1.3.js"></script>
+        <script type="text/javascript" src="js/froogaloop.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+           
 	<!-- ACC end -->
 	
 	</head>
@@ -48,7 +58,7 @@
 					<a href="#home" id="bar" class="ui-btn ui-corner-all">Home</a>
 				</nav>	
 			</div>
-			<div data-role="content" id="con">
+			<div data-role="content" id="con1">
 				<img src="smarterservicesheader.jpg" alt="" class="bg" />
 			</div>
 			<section id="left">
@@ -74,8 +84,8 @@
 					<a href="#home" id="bar" class="ui-btn ui-corner-all">Home</a>
 				</nav>	
 			</div>
-			<div data-role="content" id="con2">
-				<div id="componentWrapper">
+			<div data-role="content" id="con">
+				<!--<div id="componentWrapper">
 					<div class="componentPlaylist">
 					 
 	                    <div class="slide" data-width='' data-height='' data-delay='300' data-link='' data-target='' data-preventDefaultOnOpen='true'> 
@@ -104,9 +114,22 @@
 	                        </div>
 	                        <div class="slide_detail"></div>
 	                    </div>
-	                 </div>
-	            </div> 
-			</div>
+	                </div>
+	            </div>-->
+				<!--<div id="container">
+				    <div id="img_container">
+				        <img id="img1" src="smarterservicesicon1.jpg"/>
+				        <img id="img2" src="smarterservicesicon2.jpg"/>
+				        <img id="img3" src="smarterservicesicon3.jpg"/>				  
+				    </div>
+				</div>-->
+				<div id="">
+					
+				
+				</div>
+				
+				
+	        </div> 
 		</div>
 	<!--lawn page ends-->
 	
@@ -125,8 +148,13 @@
 			</div>
 		</div>
 	<!--ash page ends-->
+	<div data-role="dialog" id="quote">
+		<h2>Please Select a service:</h2>
+			<a href="#mow" class="ui-btn ui-corner-all ui-btn-inline ">Lawn Services</a>
+			<a href="#ash" class="ui-btn ui-corner-all ui-btn-inline ">Asphalt Services</a>
+	</div>
 	
-		<div data-role="page" id="quote">
+		<div data-role="page" id="mow">
 			<div data-role="header" id="head">
 				<nav>
 					<img src="logo/logo.png" alt="" id="logo" class=""/>
@@ -137,12 +165,65 @@
 				</nav>	
 			</div>
 			<div data-role="content" id="">
-				quote page
+				<form>
+				    <fieldset data-role="controlgroup">
+				    <legend><h2>Just answer these 3 questions and get a free customized quote on your lawn by the end of the day</h2></legend>
+				    	<p><strong>(1) Enter your address:</strong></p>
+				    	<input type="text" name="address" placeholder="Address" value="" />
+				    	<input type="text" name="State" placeholder="State" value="" />
+				    	<input type="text" name="Zip" placeholder="Zip" value="" />
+				    	<br />
+				    	<p><strong>Enter your contact info:</strong></p>
+				    	<input type="text" name="Phone" placeholder="Phone Number" value="" />
+				    	<input type="email" name="Email" placeholder="Email" value="" />
+				    	<br />
+				        <p><strong>(2) Type of Service:</strong></p>
+				        <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+				        <label for="checkbox-v-2a">Mow Only (Standard)</label>
+				        <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+				        <label for="checkbox-v-2b">Mow and Edge (Deluxe)</label>
+				        <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+				        <label for="checkbox-v-2c">Mow, Edge, and Blow (Premium)</label>
+				        <br />
+				        <p><strong>(3) Frequency of Service:</strong></p>
+				        <input type="checkbox" name="checkbox-v-3a" id="checkbox-v-3a">
+				        <label for="checkbox-v-3a">Single Service only</label>
+				        <input type="checkbox" name="checkbox-v-3b" id="checkbox-v-3b">
+				        <label for="checkbox-v-3b">Every 7 Days</label>
+				        <input type="checkbox" name="checkbox-v-3c" id="checkbox-v-3c">
+				        <label for="checkbox-v-3c">Every 10 Days</label>
+				        <input type="checkbox" name="checkbox-v-3d" id="checkbox-v-3d">
+				        <label for="checkbox-v-3d">Every 14 Days</label>
+				        <br />
+				        <p><strong>Any Additional Comments you would like to leave us about your lawn?</strong></p>
+				        <textarea></textarea>
+				        <br />
+				        <fieldset class="contact">
+				         <p><strong>How would you like us to contact you:</strong></p>
+				        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="2" checked="checked">
+				        <label for="radio-choice-v-2a">Call</label>
+				        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b" value="1">
+				        <label for="radio-choice-v-2b">Text Message</label>
+				        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2c" value="0">
+				        <label for="radio-choice-v-2c">Email</label>
+				        </fieldset>
+				        
+				        <input type="submit" name="" value="Submit" />
+				    </fieldset>
+				</form>
+				
+				
+				
 			</div>
 		</div>
 	<!--quote page ends-->
 	
-		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript" src="js/jquery.accordionGallery.min.js"></script> 
+	
+		<!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	  	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	  	<script src="js/jquery.mobile.custom.js" type="text/javascript"></script>
 	  	<script src="js/jquery.mobile.custom.min.js" type="text/javascript"></script>
